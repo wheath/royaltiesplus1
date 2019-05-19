@@ -6,6 +6,8 @@ import { getFiles } from './components/fileStorage/FileStorageActions'
 // Images
 import skale_logo from './assets/Skale_Logo_White.png'
 import bg from './assets/demo-background.png'
+import big_red_btn_up from './assets/big-red-btn-up.png'
+import big_red_btn_dn from './assets/big-red-btn-dn.png'
 
 // Styles
 import './App.scss'
@@ -23,17 +25,68 @@ getWeb3
 class App extends Component {
   render() {
     return (
-      <div className="App" style={{backgroundImage: 'url(' + bg + ')'}}>
+      <div className="App">
         <div className="content">
         <div className="header">
-          <nav className="navbar navbar-expand-lg navbar-dark">
+          <nav className="navbar">
             <Link to="/" className="navbar-brand">
-              <img className="logo" alt="SKALE" src={skale_logo}/>
+	    Royalties +1
+            </Link>
+            <Link to="/" className="nav-link-right">
+	    About Contact | Login
             </Link>
           </nav>
         </div>
-          <div className="contentWindow h-100">
+          <br/>
+          <br/>
+          <div id="upload-img" className="contentWindow h-100">
           {this.props.children}
+          </div>
+          <div id="accept-offer" className="contentWindow h-100">
+	    <span className="offer">Offer: </span><span className="money">$100,000</span>
+	    <br/>
+	    <button className="button">
+	      <img className="button__image button__image--active"
+		   src={big_red_btn_up}
+		   alt="OFF"/>
+	      <img className="button__image button__image--inactive"
+		   src={big_red_btn_dn}
+		   alt="ON"/>
+	    </button>
+          </div>
+          <br/>
+          <br/>
+          <div id="debt-offer" className="contentWindow h-100">
+          <span className="offer">Make Offers</span>
+          <table>
+	    <tr>
+	      <th>
+	        Artist Name  
+	      </th>
+	      <th>
+	        Royalties Owed
+	      </th>
+	      <th>
+	        Bid Amount
+	      </th>
+	      <td></td>
+	    </tr>
+	    <tr>
+	      <td>
+	        Whitney Houston
+	      </td>
+	      <td>
+	        $1,000,000
+	      </td>
+	      <td>
+	        <input type="text" name="offer1"/>
+	      </td>
+	      <td>
+	        <input type="submit" name="Make Offer"/>
+	      </td>
+	    </tr>
+          </table>
+	     
           </div>
         </div>
       </div>

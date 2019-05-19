@@ -2,8 +2,8 @@
 
 body {
   font-family: 'Space Mono', monospace;
-  color: #ffffff;
-  background-color: #000000;
+  color: #777777;
+  background-color: #FFFFFF;
 }
 
 h1, h2, h3 {
@@ -56,6 +56,18 @@ img.medium {
   color: #d6dc20;
   font-size: 16px;
   text-align: left;
+}
+
+.offer {
+  color: #000000;
+  font-size: 24px;
+  text-align: center;
+}
+
+.money {
+  color: green;
+  font-size: 34px;
+  text-align: center;
 }
 
 .yellow-button:hover,
@@ -176,12 +188,12 @@ input {
 /* NAVBAR */
 
 .navbar {
-  background: #1a1a1a;
+  background: #AAAAAA;
   font-size: 14px;
   font-weight: 600;
-  padding: 0px 30px 5px;
+  /* padding: 0px 30px 5px; */
   font-family: 'Space Mono', monospace;
-  box-shadow: 2px 0px 11px #29ABE1;
+  /* box-shadow: 2px 0px 11px #29ABE1; */
 }
 
 .navbar a {
@@ -192,7 +204,7 @@ input {
 .navbar a:active,
 .navbar a:focus,
 .navbar a:hover {
-  background: #1a1a1a;
+  background: #333333;
   border-top: 4px solid #d9e021;
 }
 
@@ -206,12 +218,24 @@ input {
 }
 
 .card {
-  background-color: #1a1a1a;
+  background-color: #333333;
 }
 
 .accordion {
   padding-top: 0px;
 }
+
+.nav-link-right {
+  padding: 5px;
+  text-align: right;
+  color: #29ABE1;
+  font-size: 11px;
+}
+
+.hide {
+  display:none;
+}
+
 .card-header {
   padding: 5px;
   text-align: center;
@@ -224,6 +248,15 @@ input {
     color: #29ABE1;
 
   }
+}
+
+.button__image--inactive,
+.button:active .button__image--active {
+  display: none;
+}
+
+.button:active .button__image--inactive {
+  display: inline-block;
 }
 
 .card-body {

@@ -44,12 +44,12 @@
   }
 
   .fileUpload + label {
-    color: #d9e021;
+    color: #333333;
   }
 
   .fileUpload:focus + label,
   .fileUpload.has-focus + label,
   .fileUpload + label:hover {
-      color: #d9e021;
+      color: #222222;
   }
 }
