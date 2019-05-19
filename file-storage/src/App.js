@@ -26,7 +26,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="content">
+        <div className="container-fluid">
         <div className="header">
           <nav className="navbar">
             <Link to="/" className="navbar-brand">
@@ -39,10 +39,10 @@ class App extends Component {
         </div>
           <br/>
           <br/>
-          <div id="upload-img" className="contentWindow h-100">
+          <div id="upload-img">
           {this.props.children}
           </div>
-          <div id="accept-offer" className="contentWindow h-100">
+          <div id="accept-offer" className="container">
 	    <span className="offer">Offer: </span><span className="money">$100,000</span>
 	    <br/>
 	    <button className="button">
@@ -56,7 +56,7 @@ class App extends Component {
           </div>
           <br/>
           <br/>
-          <div id="debt-offer" className="contentWindow h-100">
+          <div id="debt-offer" className="container">
           <span className="offer">Make Offers</span>
           <table>
 	    <tr>
